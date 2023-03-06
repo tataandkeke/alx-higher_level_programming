@@ -5,6 +5,7 @@
 /**
  * check_cycle - list checking
  * @list: list
+ *
  * Return: 1
  */
 
