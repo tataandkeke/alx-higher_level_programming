@@ -9,6 +9,6 @@
 
 int check_cycle(listint_t *list)
 {
-	(void)list;
+	(void) list;
 	return (1);
 }
