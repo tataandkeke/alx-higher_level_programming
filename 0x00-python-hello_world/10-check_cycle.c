@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include "list.h"
+#include <string.h>
 
 /**
  * check_cycle - list checking
