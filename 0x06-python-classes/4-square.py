@@ -15,7 +15,7 @@ class Square:
         """
         self.size = size
 
-    
+    @property
     def size(self):
         """ get size attr with property decorator
         Returns:
@@ -23,7 +23,7 @@ class Square:
         """
         return self.__size
 
-    
+    @size.setter
     def size(self, value):
         """ Square class instance initialization
          Args:
