@@ -28,5 +28,5 @@ class Square:
         """ The Area public instance method
         """
 
-        self.__area = self.__size * 2
+        self.__area = self.__size * self.__size
         return (self.__area)
