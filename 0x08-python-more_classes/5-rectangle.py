@@ -103,4 +103,4 @@ class Rectangle:
         """__del__ deletes an instance of the object
         Returns: a string bye rectangle...
         """
-        f"Bye rectangle..."
+        print("Bye rectangle...")
