@@ -1,21 +1,16 @@
 #!/usr/bin/python3
-"""BaseGeometry module
+""" Base Geometry Class module
 """
 
 
 class BaseGeometry:
-    """ empty BaseGeometry
+
+    """ Base Geometry Class
     """
 
-    def area(self):
-        """Area function that is still empty
-
-        Args:
-            self: this object
-        Return:
-            return area
+    def area(self) -> Exception:
+        """ area method not implemented
         """
-
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name: str, value: int) -> Exception:
