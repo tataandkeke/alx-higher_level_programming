@@ -29,7 +29,7 @@ class BaseGeometry:
             value: the number parsed
         """
 
-        if (isinstance(value, int) is False):
+        if (type(value) != int):
             raise TypeError(F"{self.name} must be an integer")
         elif (value <= 0):
             raise ValueError(F"{self.name} must be greater than 0")
