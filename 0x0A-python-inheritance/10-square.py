@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """ Square Module
 Attributes:
-    Rectangle (object): Rectangle class
+    Rectangle (object): Base Object
 """
 
-Rectangle = __import__("9-rectangle.py").Rectangle
+Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
@@ -12,18 +12,11 @@ class Square(Rectangle):
     """ Square Class
     """
 
-    def __init__(self, size):
-        """ Initialization
-
+    def __init__(self, size: int) -> None:
+        """ instance initialization function
         Args:
-            size (int): the size
+            size (int): Description
         """
-
         self.integer_validator("size", size)
+        super().__init__(size, size)
         self.__size = size
-
-    def area(self) -> int:
-        return self.__height * self.__width
-
-    def __str__(self) -> str:
-        return f"[Rectangle] {self.__width:d}/{self.__height:d}"
