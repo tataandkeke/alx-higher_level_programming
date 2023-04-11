@@ -30,6 +30,6 @@ class BaseGeometry:
         """
 
         if type(value) != int:
-            raise TypeError(F"{self.name} must be an integer")
+            raise TypeError(F"{name} must be an integer")
         if value <= 0:
-            raise ValueError(F"{self.name} must be greater than 0")
+            raise ValueError(F"{name} must be greater than 0")
