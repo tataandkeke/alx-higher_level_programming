@@ -23,9 +23,7 @@ class BaseGeometry:
 
         Args:
             self: this object
-
             name: name of the value
-
             value: the number parsed
         """
 
