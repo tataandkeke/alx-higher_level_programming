@@ -16,7 +16,7 @@ def write_file(filename="", text=""):
     n_char = 0
 
     with open(filename, mode='w', encoding='utf-8') as a_file:
-        s_file.write(text)
+        a_file.write(text)
 
     for c in text:
         n_char += 1
