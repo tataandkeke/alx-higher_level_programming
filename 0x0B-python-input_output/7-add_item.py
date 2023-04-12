@@ -1,32 +1,23 @@
 #!/usr/bin/python3
-"""This is the load_from_json_file module
+"""add item module
+Deleted Attributes:
+    filename (str): Description
 """
 
-
 import json
+import sys
+import os.path
 
+if __name__ == __main__:
 
-def save_to_json_file(my_obj, filename):
-    """ save_to_json_file function write an Object to a text file
-        Args:
-            filename: file name variable
-            my_obj:   object file
-        Return:
-            reads the file
-    """
+    save_to_json_file = __import__('7-save_to_json_file').save_to_json_file
+    load_from_json_file = __import__(
+        '8-load_from_json_file').load_from_json_file
 
-    with open(filename, mode='w', encoding='utf-8') as add_item.json:
-        add_item.json.write(json.dumps(my_obj))
-
-
-def load_from_json_file(filename):
-    """ load_from_json_file function create an Object from a text file
-
-        Args:
-            filename: file name variable
-        Return:
-            an object
-    """
-
-    with open(filename, encoding='utf-8') as add_item.json:
-        return (json.load(add_item.json))
+    filename = "add_item.json"
+    if os.path.isfile(filename):
+        obj = load_from_json_file(filename)
+    else:
+        obj = []
+    obj.extend(sys.argv[1:])
+    save_to_json_file(obj, filename)
