@@ -4,5 +4,13 @@
 
 
 def read_file(filename=""):
+    """ read_file function reads a file and prints it to stdot
+
+        Args:
+            filename: file name variable
+        Return:
+            reads the file
+    """
+
     with open(filename, encoding='utf-8') as a_file:
         a_file.read()
