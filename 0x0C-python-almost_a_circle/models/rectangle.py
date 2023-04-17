@@ -40,14 +40,14 @@ class Rectangle(Base):
     def set_y(self, y):
         self.__y = y
 
-    def get_width(self, width):
+    def get_width(self):
         return self.__width
 
-    def get_height(self, height):
+    def get_height(self):
         return self.__height
 
-    def get_x(self, x):
+    def get_x(self):
         return self.__x
 
-    def get_y(self, y):
+    def get_y(self):
         return self.__y

@@ -20,7 +20,3 @@ class TestRectangle(unittest.TestCase):
     def test_rect3(self):
         r = Rectangle(11, 15, 0, 0, 12)
         self.assertEqual(r.id, 12)
-
-    def test_rec4(self):
-        r = Rectangle(5, 2)
-        self.assertEqual(r.get
