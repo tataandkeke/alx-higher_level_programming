@@ -21,33 +21,110 @@ class Rectangle(Base):
     __y = 0
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        self.set_width(width)
-        self.set_height(height)
-        self.set_x(x)
-        self.set_y(y)
+        """init funtion
+        ARGS
+            width: width vriable
+            height: height variable
+            x= int varaibale
+            y= int variable
+            id= int variable
+        """
+
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
         Base.__init__(self, id)
 
-    def set_width(self, width):
-        self.__width = width
-
-    def set_height(self, height):
-        self.__height = height
-
-    def set_x(self, x):
-        self.__x = x
-
-    def set_y(self, y):
-        self.__y = y
-
-    def get_width(self):
+    @property
+    def width(self):
+        """ width getter
+        Returns:
+                int: the width
+        """
         return self.__width
 
-    def get_height(self):
+    @width.setter
+    def width(self, value):
+        """ width setter
+        Args:
+                value (int): width value
+        Raises:
+                TypeError: width must be an integer
+                ValueError: must be > 0
+        """
+        if type(value) != int:
+            raise TypeError("width must be an integer")
+        if value <= 0:
+            raise ValueError("width must be > 0")
+        self.__width = value
+
+    @property
+    def height(self):
+        """ height getter
+        Returns:
+                int: the height
+        """
         return self.__height
 
-    def get_x(self):
+    @height.setter
+    def height(self, value):
+        """height setter
+        Args:
+                value (int): height value
+        Raises:
+                TypeError: height must be an integer
+                ValueError: must be > 0
+        """
+        if type(value) != int:
+            raise TypeError("height must be an integer")
+        if value <= 0:
+            raise ValueError("height must be > 0")
+        self.__height = value
+
+    @property
+    def x(self):
+        """ x getter
+        Returns:
+                int: x value
+        """
         return self.__x
 
-    def get_y(self):
+    @x.setter
+    def x(self, value):
+        """ x setter
+        Args:
+                value (int): x value
+        Raises:
+                TypeError: x must be an integer
+                ValueError: x must be >= 0
+        """
+        if type(value) != int:
+            raise TypeError("x must be an integer")
+        if value < 0:
+            raise ValueError("x must be >= 0")
+        self.__x = value
+
+    @property
+    def y(self):
+        """ y getter
+        Returns:
+                int: y value
+        """
         return self.__y
+
+    @y.setter
+    def y(self, value):
+        """y setter
+        Args:
+                value (int): y value
+        Raises:
+                TypeError: y must be an integer
+                ValueError: y must be >= 0
+        """
+        if type(value) != int:
+            raise TypeError("y must be an integer")
+        if value < 0:
+            raise ValueError("y must be >= 0")
+        self.__y = value
